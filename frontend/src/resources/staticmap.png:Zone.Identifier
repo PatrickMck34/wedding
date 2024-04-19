@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://www.hitched.co.uk/
+HostUrl=https://maps.googleapis.com/maps/api/staticmap?center=51.5131,-0.121667&zoom=15&markers=scale:2%7Cicon:https://cdn1.hitched.co.uk/assets/img/maps/below-the-fold/bg_marker-pushpin.png%7Clabel:S%7C51.5131,-0.121667&size=966x400&scale=2&key=AIzaSyCoU4gHGstTl2eTOuJsZG_Lb19j9XQ89MM&language=en&signature=0sc_Y_ZN6w547fSW3S0KYJusczA=

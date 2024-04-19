@@ -1,0 +1,143 @@
+{
+  
+  "name": "persephones_promise",
+  
+  "main": "index.js",
+  
+  "version": "0.1.0",
+  
+  "private": true,
+  
+  "dependencies": {
+  
+    
+  "@emotion/styled": "^11.11.0",
+  
+    
+  "@heroicons/react": "^1.0.6",
+  
+    
+  "@mui/icons-material": "^5.15.13",
+  
+    
+  "express": "^5.0.0-beta.2",
+  
+    
+  "express-validator": "^6.15.0",
+  
+    
+  "js-cookie": "^3.0.5",
+  
+    
+  "mdb-cli": "^4.3.0",
+  
+    
+  "nodemon": "^2.0.22",
+  
+    
+  "per-env": "^1.0.2",
+  
+    
+  "pg": "^8.11.0",
+  
+    
+  "react-dom": "^18.2.0",
+  
+    
+  "react-redux": "^8.1.0",
+  
+    
+  "react-router-dom": "^5.3.4",
+  
+    
+  "redux": "^4.2.1",
+  
+    
+  "redux-thunk": "^2.4.2",
+  
+    
+  "sequelize": "^6.32.0"
+  
+  },
+  
+  "scripts": {
+  
+    
+  "draw": "node draw.js",
+  
+    
+  "render-postbuild": "npm run build --prefix frontend",
+  
+    
+  "install": "npm --prefix backend install backend && npm --prefix frontend install frontend",
+  
+    
+  "dev:backend": "npm install --prefix backend start",
+  
+    
+  "dev:frontend": "npm install --prefix frontend start",
+  
+    
+  "sequelize": "npm run --prefix backend sequelize",
+  
+    
+  "sequelize-cli": "npm run --prefix backend sequelize-cli",
+  
+    
+  "start": "npm start --prefix backend",
+  
+    
+  "build": "npm run build --prefix backend"
+  
+  },
+  
+  "eslintConfig": {
+  
+    
+  "extends": [
+  
+    
+    
+  "react-app"
+  
+    
+  ]
+  
+  },
+  
+  "repository": {
+  
+    
+  "type": "git",
+  
+    
+  "url": "git+https://github.com/PatrickMck34/API-project.git"
+  
+  },
+  
+  "keywords": [],
+  
+  "author": "",
+  
+  "license": "ISC",
+  
+  "bugs": {
+  
+    
+  "url": "https://github.com/PatrickMck34/API-project/issues"
+  
+  },
+  
+  "devDependencies": {
+  
+    
+  "redux-logger": "^3.0.6",
+  
+    
+  "tailwindcss": "^3.3.2",
+  
+    
+  "tw-elements": "^1.0.0-beta2"
+  
+  }
+}
