@@ -128,7 +128,7 @@ function Landing() {
         <label className="flex flex-col text-sm "> Number of Guests
         <input type="number" value={Guests} onChange={(e) => setGuests(e.target.value)} placeholder="" className="border-2 border-slate-500 rounded shadow-sm shadow-slate-300" />
         </label>
-          Name of Party
+          Party Name
 
           <textarea className="border-2 border-slate-500 rounded shadow-sm shadow-slate-300" value={Party} onChange={(e) => setGuestName(e.target.value)}></textarea>
           </label>
