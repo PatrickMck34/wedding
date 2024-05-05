@@ -2,10 +2,8 @@ import React, {useState, useEffect} from "react";
 import {useDispatch, useSelector} from 'react-redux';
 import couple from "../../../resources/couple.jpg";
 import Header from "../header/header";
-import sunset from "../../../resources/sunset.jpg";
 import bouquet from "../../../resources/bouquet.jpg";
 import people from "../../../resources/people.jpg";
-import lace from "../../../resources/lace.jpg";
 import Footer from "../../footers/footer"; 
 import noMad from "../../../resources/noMad.jpeg";
 import staticmap from "../../../resources/staticmap.png";
@@ -24,14 +22,15 @@ function Landing() {
   const [Allergies, setAllergies] = useState("");
   const [assignments, setAssignments] = useState([]);
   const [Table, setTable] = useState("");
-  const ass = Object.values(assignments)
+
   const allS = useSelector(state => state.section.allSections);
   const allSections = Object.values(allS)
   const tableNumbers = allSections.map(section => section.Table);
   const [remainder, setRemainder] = useState("")
   const remainders =  allSections.map(section => section.remainder);
+  const [sub, setSub] = useState(false)
   function assignSeats(){
-
+//set up table seed data
     
     let tables = [
       { number: "1", seats: 4 },
@@ -65,9 +64,11 @@ function Landing() {
       { number: "29", seats: 8 },
       { number: "30", seats: 6 },
   ];
+  //filter through tables that have not been assigned
   tables = tables.filter(table => !tableNumbers.includes(table.number));
   allSections.map((section)=>{
 
+    //check for tables with empty seats if party can fill them without breaking a party
     if (Guests <= section.remainder) {
       setTable(section.Table)
       setRemainder(section.remainder - Guests)
@@ -96,7 +97,7 @@ function Landing() {
   const handleSubmit=(e)=> {
     e.preventDefault();
       
-    
+    setSub(true)
   dispatch(providerActions.createProvider({Party, Table, Guests, remainder})).then(()=>dispatch(sectionActions.getAllProviders()))
 }
     useEffect(() => {
@@ -188,14 +189,17 @@ function Landing() {
             </div>
         </div>
         }
-        {!Attendance && <div className="flex flex-col">
+        {!Attendance &&  <div className="flex flex-col">
         <button  className="rounded-xl mt-9 flex ml-36 bg-gray-200 border-2 border-slate-600 p-[2px] shadow-sm w-24 justify-center shadow-slate-700"  onClick={assignSeats}>Get Table</button>
       </div>
 }
-        {Attendance && <div className="flex flex-col">  
+        {Attendance && !sub && <div className="flex flex-col">  
         <button type="submit" className="rounded-xl mt-9 flex ml-36 bg-gray-200 border-2 border-slate-600 p-[2px] shadow-sm w-24 justify-center shadow-slate-700"  onClick={handleSubmit}>Submit</button>
      </div>
-    
+}
+    {sub && <div className="flex flex-col justify-center items-center text-3xl">
+    Thank you for your RSVP!
+    </div>
         }
     </form>
      
