@@ -174,7 +174,7 @@ function Landing() {
       </div>
       <div className="flex flex-row mt-5">
 
-      <label className="absolute mt-8">Any food allergies?
+      <label className="absolute mt-8">Do you have any food allergies?
       </label>
         <textarea name="allergies" className="mt-6 ml-[11em] border-2 border-slate-500 rounded shadow-sm shadow-slate-300"></textarea>
       </div>
