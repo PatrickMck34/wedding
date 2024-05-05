@@ -138,7 +138,7 @@ function Landing() {
         <div className="flex justify-center flex-col font-serif">
        <span className="text-4xl">
 
-         Will you be attending?
+         Can you make it?
         </span>
         <div className="flex justify-center flex-col font-serif items-center">
 
