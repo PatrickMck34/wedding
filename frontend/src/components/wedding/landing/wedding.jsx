@@ -143,10 +143,10 @@ function Landing() {
         <div className="flex justify-center flex-col font-serif items-center">
 
         <label>
-        <input type="radio" value="Joyfully accepts" name="attendance" className="mt-8 mb-4 ml-[-11%]" /> Joyfully accepts
+        <input type="radio" value="Joyfully accepts" name="attendance" className="mt-8 mb-4 ml-[-11%]" /> Joyfully Accepts
       </label>
       <label>
-        <input type="radio" value="Regretfully declines" name="attendance" /> Regretfully declines
+        <input type="radio" value="Regretfully declines" name="attendance" /> Regretfully Declines
       </label>
         </div>
         </div>
